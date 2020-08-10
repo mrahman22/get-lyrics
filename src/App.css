@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+/*==================== Header =======================*/
+
+.header {
+    background-color: red;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*==================== Header =======================*/
+
+
+
+
+
+/*=============================================================================================================================*/
+
+
+
+
+/*==================== Search Song ===================*/
+
+.searchSong-container {
+    display: flex;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-songs {
+    width: 700px;
+    font-size: 30px;
+    border: 2px solid black;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+/*==================== Search Song ===================*/
+
+
+
+/*=============================================================================================================================*/
+
+
+
+/*==================== Search Song ===================*/
+
+.results-container {
+    display: flex;
+    flex-wrap: column wrap;
+    margin-top: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.results ul {
+    list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.results ul li {
+    width: 40%;
+    border: 2px solid brown;
+    padding: 10px;
+    margin: 10px;
 }
+
+
+/*==================== Search Song ===================*/
+
+
+
+
+
+
+
