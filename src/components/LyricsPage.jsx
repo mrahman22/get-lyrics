@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import * as api from "../utilities/api";
 import { Link } from "@reach/router";
+import Loading from "./Loading"
+import moment from "moment";
+import LyricsDoNotExist from "./LyricsDoNotExist";
 
 class LyricsPage extends Component {
   state = {
@@ -27,11 +30,21 @@ class LyricsPage extends Component {
   getSongLyricsById = () => {
     const { track_id } = this.props;
     api.fetchSongLyricsById(track_id).then((lyrics) => {
-      this.setState({
-        lyrics_body: lyrics.lyrics_body,
-        explicit_words: lyrics.explicit,
-        isLoading: false,
-      });
+      
+      if(lyrics === undefined) {
+        this.setState({
+          lyrics_body: "",
+          explicit_words: "",
+          isLoading: false,
+        });
+      } else {
+        this.setState({
+          lyrics_body: lyrics.lyrics_body,
+          explicit_words: lyrics.explicit,
+          isLoading: false,
+        });
+      }
+
     });
   };
 
@@ -44,10 +57,10 @@ class LyricsPage extends Component {
 
   render() {
     const { track } = this.state;
-    console.log(track)
+    if(this.state.isLoading) return <Loading />
     return (
       <div className="lyrics-container">
-        <div className="lyrics">
+        {this.state.lyrics_body ? (      <div className="lyrics">
           <Link to={`/`}>
             <button className="btn-back">BACK</button>
           </Link>{" "}
@@ -59,11 +72,10 @@ class LyricsPage extends Component {
           </div>
           <div className="bottom-part-lyrics">
             <p>Album ID: {track.album_id}</p>
-            <p>Song Genre: {track.song_genre}</p>
-            <p>Explicit Words: {track.explicit}</p>
-            <p>First Release date: {track.updated_time}</p>
+            {track.explicit ? (<p>Explicit Words: Yes</p>) : <p>Explicit Words: No</p>}
+            <p>First Release Date: {moment(track.updated_at).format("MMMM Do YYYY, h:mm:ssa")}</p>
           </div>
-        </div>
+        </div>) : <LyricsDoNotExist />}
       </div>
     );
   }

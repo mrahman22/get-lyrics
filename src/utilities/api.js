@@ -7,7 +7,6 @@ const baseUrl =
 
 
 
-  
 export const fetchTopTenTracks = () => {
   return axios
     .get(
@@ -32,6 +31,7 @@ export const fetchSongLyricsById = (track_id) => {
   return axios
     .get(`${baseUrl}/track.lyrics.get?track_id=${track_id}&apikey=${myApiKey.key}`)
     .then(({ data }) => {
+      console.log(data)
       return data.message.body.lyrics;
     })
 };

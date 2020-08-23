@@ -8,7 +8,7 @@ library.add(faPlay, faMusic);
 
 class TopTenResults extends Component {
   state = {
-    isLoading: false,
+    isLoading: false
   };
 
   render() {
@@ -21,7 +21,6 @@ class TopTenResults extends Component {
           <h2 className="top-10">Top 10 Songs</h2>
           <ul>
             {songs.map((song) => {
-              console.log(song)
               return (
                 <li key={song.track.track_id}>
                   <h3>{song.track.track_name} By {song.track.artist_name}</h3>
