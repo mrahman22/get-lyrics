@@ -8,13 +8,18 @@
 /*==================== Header =======================*/
 
 .header {
-    background-color: red;
+    background-color: teal;
     padding: 20px;
     color: white;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     font-style: italic;
 }
+
+.headphones {
+    margin-top: 5px;
+    font-size: 40px;
+}
+
 
 /*==================== Header =======================*/
 
@@ -32,16 +37,46 @@
 .searchSong-container {
     display: flex;
     justify-content: center;
+    padding: 40px;
 }
 
 .search-songs {
     width: 700px;
     font-size: 30px;
-    border: 2px solid black;
+    border: 1px solid gray;
+    box-shadow: 5px 5px;
     margin-top: 50px;
     padding: 20px;
     text-align: center;
 }
+
+.search-icon {
+    font-size: 50px;
+    color: teal;
+    margin: 20px;
+}
+
+.search-input {
+    width: 99%;
+    padding: 5px 0;
+}
+
+
+
+.btn-get_track {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 14px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
 /*==================== Search Song ===================*/
 
 
@@ -53,21 +88,55 @@
 /*==================== Search Song ===================*/
 
 .results-container {
-    display: flex;
-    flex-wrap: column wrap;
     margin-top: 100px;
 }
 
-
 .results ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .results ul li {
-    width: 40%;
-    border: 2px solid brown;
+    width: 600px;
+    border: 2px solid gray;
     padding: 10px;
     margin: 10px;
+}
+
+.song-play {
+    display: inline-block;
+    padding: 5px;
+}
+
+.song-music {
+    display: inline-block;
+    padding: 5px;
+}
+
+.btn-lyrics {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: palevioletred;
+    color: white;
+    padding: 14px 28px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.top-10 {
+    color: peru;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 
@@ -79,3 +148,62 @@
 
 
 
+/*==================== Lyrics Page ===================*/
+ul {
+    list-style-type: none;
+}
+
+
+.lyrics-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    list-style-type: none;
+}
+
+.btn-back {
+    background-color: black;
+    border-color: black;
+    width: 90px;
+    color: white;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.lyrics {
+    width: 60vw;
+    padding: 20px;
+    margin: 20px;
+}
+
+.top-part-lyrics h2 {
+    margin-bottom: 10px;
+    background-color: gray;
+    color: white;
+    padding: 20px;
+}
+
+.top-part-lyrics p {
+    padding: 20px;
+    text-align: justify;
+}
+
+
+.top-part-lyrics {
+    border: 1px solid gray;
+}
+
+.bottom-part-lyrics {
+    margin-top: 30px;
+}
+
+.bottom-part-lyrics p {
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+
+
+
+
+/*==================== Lyrics Page ===================*/
