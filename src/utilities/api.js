@@ -13,6 +13,7 @@ export const fetchTopTenTracks = () => {
       `${baseUrl}/chart.tracks.get?&page=1&page_size=10&country=us&f_has_lyrics=1&apikey=${myApiKey.key}`
     )
     .then(({ data }) => {
+      console.log(data)
       return data.message.body.track_list;
     });
 };
