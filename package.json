@@ -1,5 +1,4 @@
 {
-  "homepage": "http://mrahman22.github.io/get-lyrics",
   "name": "get-lyrics",
   "version": "0.1.0",
   "private": true,
@@ -19,8 +18,6 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "type": "module",
     "start": "BROWSER='chromium' react-scripts start",
     "build": "react-scripts build",

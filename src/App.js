@@ -6,14 +6,13 @@ import Home from "./components/Home";
 import LyricsPage from "./components/LyricsPage";
 
 class App extends Component {
-
   render() {
     return (
       <div className="App">
         <Header />
         <Router>
-          <Home path="/"/>
-          <LyricsPage path="/lyrics/:track_id"/>
+          <Home path="/" />
+          <LyricsPage path="/lyrics/:track_id" />
         </Router>
       </div>
     );
